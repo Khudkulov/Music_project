@@ -71,18 +71,12 @@
 </head>
 <body>
 
+        {% include 'navbar.html' %}
+{% block content %}
 
-<div class="super_container">
+{% endblock %}
+        {% include  'footer.html' %}
 
-    {% include 'navbar.html' %}
-    {% block content %}
-
-    {% endblock %}
-
-</div>
-
-
-{% include  'footer.html' %}
 
 <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 <script src="{% static 'styles/bootstrap-4.1.2/popper.js' %}"></script>

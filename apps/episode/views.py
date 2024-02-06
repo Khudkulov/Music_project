@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from msilib.schema import ListView
 
-# Create your views here.
+from django.shortcuts import render
+from django.views.generic import TemplateView
+
+
+class EpisodeListView(TemplateView):
+    template_name = 'episode/episodes.html'
