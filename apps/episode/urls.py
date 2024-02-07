@@ -1,7 +1,10 @@
 from django.urls import path
-from .views import EpisodeListView
+
+from .views import EpisodeListView, EpisodeDetailView
+
 app_name = 'episode'
 
 urlpatterns = [
-    path('episode-list/', EpisodeListView.as_view(), name='episode-list')
+    path('list/', EpisodeListView.as_view(), name='list'),
+    path('detail/', EpisodeDetailView.as_view(), name='detail'),
 ]

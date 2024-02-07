@@ -1,4 +1,4 @@
-{% extends  'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block styles %}
@@ -7,13 +7,10 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles/about_responsive.css' %}">
 {% endblock %}
 
-
-
 {% block content %}
 
     <div class="home">
-        <div class="parallax_background parallax-window" data-parallax="scroll"
-             data-image-src="{% static 'images/about.jpg' %}"
+        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/about.jpg' %}"
              data-speed="0.8"></div>
         <div class="home_container d-flex flex-column align-items-center justify-content-center">
             <div class="home_content">
@@ -30,15 +27,12 @@
                         <div class="section_title text-center"><h1>About my<span>podcast</span></h1></div>
                         <div class="intro_text text-center">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a bibendum sem. Fusce
-                                dignissim
-                                et diam quis pretium.
+                                dignissim et diam quis pretium.
                                 Etiam efficitur semper accumsan. Sed et dui aliquet, ultrices tellus non, sagittis
-                                magna.
-                                Nullam justo quam, vestibulum non magna et, tempus tincidunt est. Ut laoreet magna ac
-                                luctus
-                                lacinia. Aliquam eget neque turpis. Phasellus nibh ex, tristique a magna ac, convallis
-                                tincidunt diam. Nulla facilisi. Phasellus porta sapien sit amet tortor rhoncus
-                                mattis.</p>
+                                magna. Nullam justo quam, vestibulum non magna et, tempus tincidunt est. Ut laoreet
+                                magna ac luctus lacinia. Aliquam eget neque turpis. Phasellus nibh ex, tristique a magna
+                                ac, convallis tincidunt diam. Nulla facilisi. Phasellus porta sapien sit amet tortor
+                                rhoncus mattis.</p>
                         </div>
                         <div class="button_fill intro_button"><a href="#">read more</a></div>
                     </div>
@@ -48,8 +42,7 @@
     </div>
 
     <div class="milestones">
-        <div class="parallax_background parallax-window" data-parallax="scroll"
-             data-image-src="{% static 'images/episode_1.jpg' %}"
+        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/milestones.jpg' %}"
              data-speed="0.8"></div>
         <div class="container">
             <div class="row">
@@ -63,10 +56,43 @@
                     <div class="milestone text-center">
                         <div class="milestone_content ml-auto mr-auto">
                             <div class="milestone_counter" data-end-value="55126">0</div>
-                            <div class="milestone_icon"><img src="{% static 'images/img_3.png' %}"
+                            <div class="milestone_icon"><img src="{% static 'images/alarm-clock.svg' %}"
                                                              alt="https://www.flaticon.com/authors/smashicons"></div>
                         </div>
                         <div class="milestone_title">Streamed Hours</div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="milestone text-center">
+                        <div class="milestone_content ml-auto mr-auto">
+                            <div class="milestone_counter" data-end-value="3520">0</div>
+                            <div class="milestone_icon"><img src="{% static 'images/speaker.svg' %}"
+                                                             alt="https://www.flaticon.com/authors/smashicons"></div>
+                        </div>
+                        <div class="milestone_title">Audio Episodes</div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="milestone text-center">
+                        <div class="milestone_content ml-auto mr-auto">
+                            <div class="milestone_counter" data-end-value="2056">0</div>
+                            <div class="milestone_icon"><img src="{% static 'images/film.svg' %}"
+                                                             alt="https://www.flaticon.com/authors/smashicons"></div>
+                        </div>
+                        <div class="milestone_title">Video Episodes</div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="milestone text-center">
+                        <div class="milestone_content ml-auto mr-auto">
+                            <div class="milestone_counter" data-end-value="25">0</div>
+                            <div class="milestone_icon"><img src="{% static 'images/television.svg' %}"
+                                                             alt="https://www.flaticon.com/authors/smashicons"></div>
+                        </div>
+                        <div class="milestone_title">Documentaries</div>
                     </div>
                 </div>
             </div>
@@ -84,12 +110,9 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a bibendum sem. Fusce
                                     dignissim et diam quis pretium. Etiam efficitur semper accumsan. Sed et dui aliquet,
                                     ultrices tellus non, sagittis magna. Nullam justo quam, vestibulum non magna et,
-                                    tempus
-                                    tincidunt est. Ut laoreet magna ac luctus lacinia. Aliquam eget neque turpis.
-                                    Phasellus
-                                    nibh ex, tristique a magna ac, convallis tincidunt diam. Nulla facilisi. Phasellus
-                                    porta
-                                    sapien sit amet tortor rhoncus mattis.</p>
+                                    tempus tincidunt est. Ut laoreet magna ac luctus lacinia. Aliquam eget neque turpis.
+                                    Phasellus nibh ex, tristique a magna ac, convallis tincidunt diam. Nulla facilisi.
+                                    Phasellus porta sapien sit amet tortor rhoncus mattis.</p>
                             </div>
                             <div class="social">
                                 <ul class="d-flex flex-row align-items-start justify-content-start">
@@ -109,7 +132,7 @@
     </div>
 
     <div class="newsletter">
-        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg"
+        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/newsletter.jpg' %}"
              data-speed="0.8"></div>
         <div class="container">
             <div class="row">
@@ -135,7 +158,10 @@
             </div>
         </div>
     </div>
+
 {% endblock %}
-{% block script %}
+
+{% block scripts %}
+    {{ block.super }}
     <script src="{% static 'js/about.js' %}"></script>
 {% endblock %}

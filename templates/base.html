@@ -1,25 +1,21 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preview.colorlib.com/theme/mypodcast/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Feb 2024 07:59:16 GMT -->
 <head>
     <title>My Podcast</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="My Podcast template project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     {% block styles %}
+
         <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap-4.1.2/bootstrap.min.css' %}">
-        <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet"
-              type="text/css">
+        <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static 'plugins/colorbox/colorbox.css' %}" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+
     {% endblock %}
-    <script nonce="b2806588-15b7-4de0-abaf-11c6a369d328">try {
+    <script nonce="8f012d3c-72e3-467a-a7d7-4b48cc0c6fdb">try {
         (function (w, d) {
             !function (bu, bv, bw, bx) {
                 bu[bw] = bu[bw] || {};
@@ -62,7 +58,7 @@
                         }
                     }));
                     bC.referrerPolicy = "origin";
-                    bC.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(bu[bw])));
+                    bC.src = "https://preview.colorlib.com/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(bu[bw])));
                     bB.parentNode.insertBefore(bC, bB)
                 };
                 ["complete", "interactive"].includes(bv.readyState) ? zaraz.init() : bu.addEventListener("DOMContentLoaded", zaraz.init)
@@ -75,35 +71,34 @@
 </head>
 <body>
 
-
 <div class="super_container">
-{% include 'navbar.html' %}
-{% block content %}
+    {% include 'navbar.html' %}
 
-    
-    
-{% endblock %}
-{% include  'footer.html' %}
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'footer.html' %}
 </div>
 
 
-{% block script %}
+{% block scripts %}
 
-<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-<script src="{% static 'styles/bootstrap-4.1.2/popper.js' %}"></script>
-<script src="{% static 'styles/bootstrap-4.1.2/bootstrap.min.js' %}"></script>
-<script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
-<script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
-<script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
-<script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
-<script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
-<script src="{% static 'plugins/easing/easing.js' %}"></script>
-<script src="{% static 'plugins/colorbox/jquery.colorbox-min.js' %}"></script>
-<script src="{% static 'plugins/progressbar/progressbar.min.js' %}"></script>
-<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
-<script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'styles/bootstrap-4.1.2/popper.js' %}"></script>
+    <script src="{% static 'styles/bootstrap-4.1.2/bootstrap.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+    <script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'plugins/easing/easing.js' %}"></script>
+    <script src="{% static 'plugins/colorbox/jquery.colorbox-min.js' %}"></script>
+    <script src="{% static 'plugins/progressbar/progressbar.min.js' %}"></script>
+    <script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+
+
 {% endblock %}
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -116,12 +111,12 @@
 
     gtag('config', 'UA-23581568-13');
 </script>
-<script defer
-        src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
         integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
-        data-cf-beacon='{"rayId":"85015f87ea5d04f5","b":1,"version":"2024.2.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
+        data-cf-beacon='{"rayId":"84fab230facd2118","b":1,"version":"2024.2.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
         crossorigin="anonymous"></script>
+
+
 </body>
 
-<!-- Mirrored from preview.colorlib.com/theme/mypodcast/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Feb 2024 07:59:41 GMT -->
 </html>

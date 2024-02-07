@@ -1,8 +1,9 @@
-from msilib.schema import ListView
-
-from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView
 
 
 class EpisodeListView(TemplateView):
-    template_name = 'episode/episodes.html'
+    template_name = 'episode/episode_list.html'
+
+
+class EpisodeDetailView(TemplateView):
+    template_name = 'episode/episode_detail.html'
