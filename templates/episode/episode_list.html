@@ -10,7 +10,8 @@
 
 {% block content %}
     <div class="home">
-        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/about.jpg' %}"
+        <div class="parallax_background parallax-window" data-parallax="scroll"
+             data-image-src="{% static 'images/about.jpg' %}"
              data-speed="0.8"></div>
         <div class="home_container d-flex flex-column align-items-center justify-content-center">
             <div class="home_content">
@@ -113,13 +114,15 @@
                                 </div>
                             </div>
                             <div class="episode_content">
-                                <div class="episode_name"><a href="{% url 'episode:detail' %}">Audio - Lorem ipsum dolor sit amet
+                                <div class="episode_name"><a href="{% url 'episode:detail' %}">Audio - Lorem ipsum dolor
+                                    sit amet
                                     consectetur</a></div>
                                 <div class="episode_date"><a href="#">24 September, 2018</a></div>
                                 <div class="show_info d-flex flex-row align-items-start justify-content-start">
                                     <div class="show_fav d-flex flex-row align-items-center justify-content-start">
                                         <div class="show_fav_icon show_info_icon"><img class="svg"
-                                                                                       src="{% static 'images/heart.svg' %}" alt></div>
+                                                                                       src="{% static 'images/heart.svg' %}"
+                                                                                       alt></div>
                                         <div class="show_fav_count">2371</div>
                                     </div>
                                     <div class="show_comments">
@@ -205,7 +208,11 @@
 
 {% block scripts %}
     {{ block.super }}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js" integrity="sha512-g0etrk7svX8WYBp+ZDIqeenmkxQSXjRDTr08ie37rVFc99iXFGxmD0/SCt3kZ6sDNmr8sR0ISHkSAc/M8rQBqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"
+            integrity="sha512-g0etrk7svX8WYBp+ZDIqeenmkxQSXjRDTr08ie37rVFc99iXFGxmD0/SCt3kZ6sDNmr8sR0ISHkSAc/M8rQBqg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+            integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{% static 'js/episodes.js' %}"></script>
 {% endblock %}
