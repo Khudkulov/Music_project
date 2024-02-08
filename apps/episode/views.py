@@ -7,3 +7,6 @@ class EpisodeListView(TemplateView):
 
 class EpisodeDetailView(TemplateView):
     template_name = 'episode/episode_detail.html'
+
+
+
