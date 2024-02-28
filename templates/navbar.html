@@ -10,11 +10,11 @@
                 <div class="header_content d-flex flex-row align-items-center justify-content-start trans_400">
                     <nav class="main_nav">
                         <ul class="d-flex flex-row align-items-start justify-content-start">
-                            <li><a href=".">Home</a></li>
-                            <li><a href="{% url 'main:about' %}">About</a></li>
+                            <li><a href="{% url "core:home" %}">Home</a></li>
+                            <li><a href="{% url 'core:about' %}">About</a></li>
                             <li><a href="{% url 'episode:list' %}">Episodes</a></li>
                             <li><a href="{% url 'blog:list' %}">Blog</a></li>
-                            <li><a href="{% url 'main:contact' %}">Contact</a></li>
+                            <li><a href="{% url 'core:contact' %}">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -28,12 +28,12 @@
 
         <div class="social">
             <ul class="d-flex flex-row align-items-start justify-content-start">
-                    {% if request.user.is_authenticated %}
-                        <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                    {% else %}
-                        <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
-                    {% endif %}
+                {% if request.user.is_authenticated %}
+                    <li><a href="{% url 'account:password_change' %}"><i class="fa fa-repeat" aria-hidden="true"></i></a></li>
+                    <li><a href="{% url 'account:logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+                {% else %}
+                    <li><a href="{% url 'account:login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                {% endif %}
             </ul>
         </div>
 
@@ -44,11 +44,11 @@
 <div class="menu">
     <div class="menu_content d-flex flex-column align-items-end justify-content-start">
         <ul class="menu_nav_list text-right">
-            <li><a href="{% url 'main:home' %}">Home</a></li>
-            <li><a href="{% url 'main:about' %}">About</a></li>
+            <li><a href=".">Home</a></li>
+            <li><a href="{% url 'core:about' %}">About</a></li>
             <li><a href="{% url 'episode:list' %}">Episodes</a></li>
             <li><a href="{% url 'blog:list' %}">Blog</a></li>
-            <li><a href="{% url 'main:contact' %}">Contact</a></li>
+            <li><a href="{% url 'core:contact' %}">Contact</a></li>
         </ul>
         <div class="menu_extra d-flex flex-column align-items-end justify-content-start">
             <div class="menu_submit"><a href="#">Submit your podcast</a></div>

@@ -5,12 +5,14 @@
     {{ block.super }}
     <link href="{% static 'styles/blog.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'styles/blog_responsive.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'styles/episode.css' %}">
 {% endblock %}
 
 {% block content %}
 
     <div class="home">
-        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/blog.jpg' %}"
+        <div class="parallax_background parallax-window" data-parallax="scroll"
+             data-image-src="{% static 'images/blog.jpg' %}"
              data-speed="0.8"></div>
         <div class="home_container d-flex flex-column align-items-center justify-content-center">
             <div class="home_content">
@@ -30,7 +32,7 @@
                             <div class="sidebar_title">Search</div>
                             <form action="#" class="search_form" id="search_form">
                                 <input type="text" class="search_input" placeholder="Search here" required="required">
-                                <button class="search_button"><img src="images/search.png" alt></button>
+                                <button class="search_button"><img src="{% static 'images/search.png' %}" alt></button>
                             </form>
                         </div>
 
@@ -97,7 +99,8 @@
 
                             <div class="col-md-12">
                                 <div class="blog_post_title mt-4"><a href="">How to start your podcast</a></div>
-                                <div class="blog_post_author"><a href="">By Michael Smith </a><code>   Sept 25, 2018</code></div>
+                                <div class="blog_post_author"><a href="">By Michael Smith </a><code> Sept 25,
+                                    2018</code></div>
                                 <div class="blog_post_text">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum malesuada
                                         tellus a pretium. Proin quam nisi, maximus in pulvinar sed, viverra vitae est.
@@ -106,15 +109,71 @@
                                         felis elementum a.</p>
                                 </div>
                             </div>
-
-
                         </div>
-
                     </div>
+
+                    <div class="h4 pb-2 mb-4 text-danger border-bottom border-primary"></div>
+
+                    <div class="comments">
+                        <div class="section_title">Comments</div>
+                        <div class="comments_container">
+                            <ul>
+                                <li class="d-flex flex-row">
+                                    <div>
+                                        <div class="comment_image"><img src="{% static 'images/user_1.jpg' %}" alt>
+                                        </div>
+                                    </div>
+                                    <div class="comment_content">
+                                        <div class="user_name"><a href="#">Michael Smith</a></div>
+                                        <div class="comment_text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum
+                                                malesuada tellus a pretium. Proin quam nisi, maximus in pulvinar sed,
+                                                viverra vitae es.</p>
+                                        </div>
+                                        <a class="btn btn-light" style="">reply</a>
+                                    </div>
+                                </li>
+
+                                <div class="children col-md-11 offset-1">
+                                    <ul class="">
+                                        <li class="d-flex flex-row">
+                                            <div>
+                                                <div class="comment_image"><img src="{% static 'images/user_1.jpg' %}"
+                                                                                alt></div>
+                                            </div>
+                                            <div class="comment_content">
+                                                <div class="user_name"><a href="#">Michael Smith</a></div>
+                                                <div class="comment_text">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                                        bibendum
+                                                        malesuada tellus a pretium. Proin quam nisi, maximus in pulvinar
+                                                        sed,
+                                                        viverra vitae es.</p>
+                                                </div>
+                                                <a class="btn btn-light" style="">reply</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="comment_form_container">
+                        <div class="section_title">Leave a comment</div>
+                        <form method="post" action="#" id="comment_form" class="comment_form">
+                            {% csrf_token %}
+                            <div><textarea class="comment_input comment_textarea" placeholder="Message"
+                                           required="required"></textarea></div>
+                            <button class="comment_button button_fill">send</button>
+                        </form>
+                    </div>
+                    
                 </div>
+
             </div>
-
-
         </div>
     </div>
 {% endblock %}
@@ -123,3 +182,4 @@
     {{ block.super }}
     <script src="{% static 'js/blog.js' %}"></script>
 {% endblock %}
+

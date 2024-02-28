@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'styles/episodes.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/episodes_responsive.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="home">
+        <div class="parallax_background parallax-window" data-parallax="scroll"
+             data-image-src="{% static 'images/about.jpg' %}"
+             data-speed="0.8"></div>
+        <div class="home_container d-flex flex-column align-items-center justify-content-center">
+            <div class="home_content">
+                <div class="home_title"><h1>Add Music</h1></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="episodes">
+        <div class="container">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mx-auto col-md-6">
+
+                    <div class="custom-file breadcrumb ">
+{#                        <input type="file" class="custom-file-input" id="customFile1">#}
+                        {{ form.image }}
+                        <label class="" for="customFile1">Image file</label>
+                    </div>
+
+                    <div class="custom-file breadcrumb">
+{#                        <input type="file" class="custom-file-input" id="customFile2">#}
+                        {{ form.music }}
+                        <label class="" for="customFile2">Music file</label>
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="inputTitle">Title</label>
+{#                        <input type="text" class="form-control" id="inputTitle">#}
+                        {{ form.title }}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Content</label>
+{#                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>#}
+                        {{ form.description }}
+                    </div>
+
+                    <div class="form-group ">
+                        <label>Tags</label>
+{#                        <select class="custom-select" multiple>#}
+{#                            <option value="1">One</option>#}
+{#                            <option value="2">Two</option>#}
+{#                        </select>#}
+                        {{ form.tags }}
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="inputState2">Categories</label>
+{#                        <select id="inputState2" class="form-control">#}
+{#                            <option selected>Categories...</option>#}
+{#                            <option>...</option>#}
+{#                        </select>#}
+                        {{ form.category }}
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg active text-sm-center ">Add music</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+{% block scripts %}
+    {{ block.super }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"
+            integrity="sha512-g0etrk7svX8WYBp+ZDIqeenmkxQSXjRDTr08ie37rVFc99iXFGxmD0/SCt3kZ6sDNmr8sR0ISHkSAc/M8rQBqg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+            integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'js/episodes.js' %}"></script>
+{% endblock %}
